@@ -1,0 +1,5 @@
+Create Folder: %windir%\LTSVC\Packages\7zip
+DOWNLOAD:  /Labtech/Transfer/Software/7zip/7z1900-x64.msi  saved to  %windir%\LTSVC\Packages\7zip\7z1900-x64.msi
+   LOG:  Downloaded 7zip %shellresult%
+SHELL as Admin:  msiexec.exe /i "%windir%\LTSVC\Packages\7zip\7z1900-x64.msi" /quiet /qn /norestart and store the result in %shellresult%
+   LOG:  Installed 7zip %shellresult%
