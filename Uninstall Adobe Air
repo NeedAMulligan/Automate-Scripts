@@ -1,0 +1,4 @@
+IF FILE Exists  c:\Program Files (x86)\Common Files\Adobe AIR  THEN  Jump to :Uninstall Adobe Air
+   :Uninstall Adobe Air - Label
+      SHELL as Admin:  c:\Program Files (x86)\Common Files\Adobe AIR\Versions\1.0\Resources\Adobe AIR Updater.exe -uninstall and store the result in %shellresult%
+         LOG:  Removed Adobe Air on %computername%
