@@ -1,0 +1,4 @@
+IF FILE Exists  C:\Program Files\Logitech\LogiOptions  THEN  Jump to Uninstall Logitech Options
+   :Uninstall Logitech Options - Label
+      SHELL as Admin:  "C:\Program Files\Logitech\LogiOptions\uninstaller.exe" /S and store the result in %shellresult%
+         LOG:  Removed Logitech Options on %computername%
