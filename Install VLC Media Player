@@ -1,0 +1,5 @@
+Create Folder: %windir%\LTSVC\Packages\VLC
+DOWNLOAD:  /Labtech/Transfer/Software/VlcPlayer/vlc-3.0.12-win32.exe  saved to  %windir%\LTSVC\Packages\VLC\vlc-3.0.12-win32.exe
+LOG:  Downloaded VLC Media Player %shellresult%
+SHELL as Admin:  %windir%\LTSVC\Packages\VLC\vlc-3.0.12-win32.exe /L=1033 /S  and store the result in %shellresult%
+LOG:  Installed VLC Media Player %shellresult%
