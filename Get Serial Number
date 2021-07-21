@@ -1,0 +1,2 @@
+Shell As Admin
+WMIC BIOS GET SERIALNUMBER
