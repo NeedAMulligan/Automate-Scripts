@@ -1,0 +1,6 @@
+Create Folder: %windir%\LTSVC\Packages\google
+   LOG:  Folder Created on %computername%-%computerid% successfully
+DOWNLOAD:  https://dl.google.com/chrome/install/GoogleChromeStandaloneEnterprise.msi  saved to  %windir%\LTSVC\Packages\google\chrome_installer.msi
+   LOG:  Downloaded Google Chrome on %computername%-%computerid% successfully
+SHELL as Admin:  msiexec /i %windir%\LTSVC\Packages\google\chrome_installer.msi /qn REBOOT=ReallySuppress 
+   LOG:  Installed Google Chrome on %computername%-%computerid% successfully
