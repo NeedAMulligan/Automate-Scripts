@@ -1,0 +1,18 @@
+Variable Check
+Variable Name = %os%
+Compare = Contains
+To = NewComputer
+Label = :NonOSCheck
+
+Function = Resend System Information
+
+Script Note = :NonOSCheck
+
+Script Note = ***** If not a Windows OS, Exit Script
+
+Script Goto = (leave blank)
+
+Shell = secedit /refreshpolicy machine_policy /enforce
+
+Script Log Message = Updated Machine Policy on %computername%
+
