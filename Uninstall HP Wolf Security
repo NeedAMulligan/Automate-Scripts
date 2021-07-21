@@ -1,0 +1,1 @@
+SHELL as Admin:  WMIC product where name="HP Wolf Security" call uninstall /nointeractive 
