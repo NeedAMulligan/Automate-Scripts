@@ -1,1 +1,1 @@
-EXECUTE as Admin:  C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe /changesetting Channel=Semi-Annual Channel  
+EXECUTE:  C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe /changesetting Channel=Semi-Annual Channel  
