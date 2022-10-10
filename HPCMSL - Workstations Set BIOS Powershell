@@ -1,0 +1,20 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Install-PackageProvider NuGet -Force;
+Set-PSRepository PSGallery -InstallationPolicy Trusted
+Install-Module PowerShellGet -Repository PSGallery
+Install-Module -Name HPCMSL
+Set-ExecutionPolicy Bypass
+import-module hp.clientmanagement
+Set-ExecutionPolicy Default
+
+
+Set-HPBIOSSettingValue -Name 'Startup Delay (sec.)' -Value "5" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'BIOS Power-On Hour' -Value "21" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'After Power Loss' -Value "Power On" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Sunday' -Value "Enable" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Monday' -Value "Enable" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Tuesday' -Value "Enable" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Wednesday' -Value "Enable" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Thursday' -Value "Enable" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Friday' -Value "Enable" -SkipPrecheck
+Set-HPBIOSSettingValue -Name 'Saturday' -Value "Enable" -SkipPrecheck
