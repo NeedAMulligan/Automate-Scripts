@@ -1,0 +1,7 @@
+	Statement		
+1	Create Folder: %windir%\LTSVC\Packages\Gimp		
+2	DOWNLOAD:  https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe  saved to  %windir%\LTSVC\Packages\Gimp\gimp-2.10.36-setup.exe  and wait until finish.		
+3	   LOG:  Downloaded Gimp on %computername% successfully		
+4	"SHELL:  ""C:\Windows\LTSvc\packages\Gimp\gimp-2.10.36-setup.exe"" /VERYSILENT /NORESTART /ALLUSERS and store the result in %shellresult%"		
+5	Resend Software		
+6	   LOG:  Installed Gimp on %computername% successfully		
