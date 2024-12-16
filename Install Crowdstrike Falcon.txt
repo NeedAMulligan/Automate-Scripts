@@ -81,10 +81,10 @@ param(
     [string] $FalconCloud = 'us-gov-1',
 
     [Parameter(Position = 2)]
-    [string] $FalconClientId = '32ac49546d864a3c924d3e866df422a8',
+    [string] $FalconClientId = '------------------------------------',
 
     [Parameter(Position = 3)]
-    [string] $FalconClientSecret = 'dANlSDJKw509kTOeCIGRB28asMr7EV6ZW3Y14zoP',
+    [string] $FalconClientSecret = '----------------------------------',
 
     [Parameter(Position = 4)]
     [string] $MemberCid,
