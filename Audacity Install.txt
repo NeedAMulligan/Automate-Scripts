@@ -1,0 +1,15 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\LTSVC\Packages\Audacity		
+4	DOWNLOAD:  https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe  saved to  %windir%\LTSVC\Packages\Audacity\audacity-win-3.4.2-64bit.exe  and wait until finish.		
+5	   LOG:  Downloaded Audacity on %computername% successfully		
+6	SHELL:  %windir%\LTSVC\Packages\Audacity\audacity-win-3.4.2-64bit.exe /VERYSILENT /NORESTART and store the result in %shellresult%		
+7	Resend Software		
+8	IF NOT SOFTWARE INSTALLED Audacity 3.4.2  THEN  Jump to :Audacity Not Installed		
+9	   LOG:  Installed Audacity on %computername% successfully		
+10	   Exit Script		
+11	   :Audacity Not Installed - Label		
+12	Send Email To:[email address] Subject:Unable to install Audacity on %ComputerName%		
+13	   LOG:  Audacity NOT INSTALLED on %computername% 		
+14	   Exit Script		

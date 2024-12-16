@@ -1,0 +1,11 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\ltsvc\packages\%scriptname%		
+4	DOWNLOAD:  /Labtech/Transfer/Software/Azure Information Protection Viewer/AzInfoProtectionViewer_UL.exe  saved to  %windir%\ltsvc\packages\%scriptname%\AzInfoProtectionViewer_UL.exe		
+5	LOG:  Downloaded %scriptname% on %computername% successfully		
+6	SHELL:  %windir%\ltsvc\packages\%scriptname%\AzInfoProtectionViewer_UL.exe /quiet /norestart and store the result in %shellresult%		
+7	LOG:  Installed %scriptname% on %computername% successfully		
+8	Sleep 30 seconds		
+9	Resend Software		
+10	Exit Script		

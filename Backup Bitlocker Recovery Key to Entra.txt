@@ -1,0 +1,2 @@
+	Statement		
+1	"POWERSHELL:  BackupToAAD-BitLockerKeyProtector -MountPoint $env:SystemDrive -KeyProtectorId ((Get-BitLockerVolume -MountPoint $env:SystemDrive ).KeyProtector | where {$_.KeyProtectorType -eq ""RecoveryPassword"" }).KeyProtectorId and store the result in %powershellresult%"		
