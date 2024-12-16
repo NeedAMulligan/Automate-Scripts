@@ -1,0 +1,2 @@
+	Statement		
+1	LTCommand: Registry Write HKLM%5cSOFTWARE%5cDuo+Security%5cDuoCredProv:OfflineMaxUsers:-lt-i50		

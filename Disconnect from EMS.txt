@@ -1,0 +1,4 @@
+	Statement		
+1	"SHELL:  ""c:\Program Files\Fortinet\FortiClient\FortiESNAC.exe"" -u -k NotTodayBruv0987! and store the result in %shellresult%"		
+2	"SHELL:  ""c:\Program Files\Fortinet\FortiClient\FortiESNAC.exe"" -d and store the result in %shellresult%"		
+3	LOG:  %shellresult%		
