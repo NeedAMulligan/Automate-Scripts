@@ -1,0 +1,13 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\ltsvc\packages\CiscoAnyConnect		
+4	DOWNLOAD:  /Labtech/Transfer/Software/Cisco/AnyConnect/anyconnect-win-4.10.07073-core-vpn-predeploy-k9.msi  saved to  %windir%\ltsvc\packages\CiscoAnyConnect\anyconnect-win-4.10.07073-core-vpn-predeploy-k9.msi		
+5	DOWNLOAD:  /Labtech/Transfer/Software/Cisco/AnyConnect/anyconnect-win-4.10.07073-gina-predeploy-k9.msi  saved to  %windir%\ltsvc\packages\CiscoAnyConnect\anyconnect-win-4.10.07073-gina-predeploy-k9.msi		
+6	LOG:  Downloaded Cisco AnyConnect on %computername% successfully		
+7	SHELL:  %windir%\ltsvc\packages\CiscoAnyConnect\anyconnect-win-4.10.07073-core-vpn-predeploy-k9.msi /qn /norestart and store the result in %shellresult%		
+8	SHELL:  %windir%\ltsvc\packages\CiscoAnyConnect\anyconnect-win-4.10.07073-gina-predeploy-k9.msi /qn /norestart and store the result in %shellresult%		
+9	LOG:  Installed %scriptname% on %computername% successfully		
+10	Sleep 30 seconds		
+11	Resend Software		
+12	Exit Script		

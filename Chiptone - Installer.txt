@@ -1,0 +1,8 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\ltsvc\packages\chiptone		
+4	DOWNLOAD:  /Labtech/Transfer/Software/Chiptone/chiptone-win.zip  saved to  %windir%\ltsvc\packages\chiptone\chiptone-win.zip		
+5	LOG:  Downloaded Chiptone on %computername% successfully		
+6	Execute PowerShell Script as Local and store result in: @powershellresult@		
+7	LOG:  Installed %scriptname% on %computername% successfully		
