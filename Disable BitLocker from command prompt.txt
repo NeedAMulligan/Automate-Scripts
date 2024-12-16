@@ -1,0 +1,2 @@
+	Statement		
+1	SHELL:  manage-bde -off C: and store the result in %shellresult%		
