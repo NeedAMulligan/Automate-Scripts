@@ -1,0 +1,3 @@
+	Statement		
+1	"SHELL as Admin:  sc stop ""spooler"" and store the result in %shellresult%"		
+2	"SHELL as Admin:  sc config ""spooler"" start= disabled and store the result in %shellresult%"		
