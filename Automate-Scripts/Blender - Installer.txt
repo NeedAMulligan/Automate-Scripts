@@ -1,0 +1,15 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\LTSVC\Packages\Blender\		
+4	DOWNLOAD:  https://mirror.clarkson.edu/blender/release/Blender4.1/blender-4.1.0-windows-x64.msi  saved to  %windir%\ltsvc\packages\blender\blender.msi  and wait until finish.		
+5	   LOG:  Downloaded Blender on %computername% successfully		
+6	SHELL:  %windir%\LTSVC\Packages\Blender\blender.msi /qn /norestart ALLUSERS=1 and store the result in %shellresult%		
+7	Resend Software		
+8	IF NOT SOFTWARE INSTALLED Blender  THEN  Jump to :Blender Not Installed		
+9	   LOG:  Installed Blender on %computername% successfully		
+10	   Exit Script		
+11	   :Blender Not Installed - Label		
+12	Send Email To:[email address] Subject:Unable to install Blender on %ComputerName%		
+13	   LOG:  Blender NOT INSTALLED on %computername% 		
+14	Exit Script		

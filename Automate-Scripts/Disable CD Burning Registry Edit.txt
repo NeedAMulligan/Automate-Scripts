@@ -1,0 +1,3 @@
+	Statement		
+1	LTCommand: Registry Read HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cPolicies%5cExplorer:NoCDBurning		
+2	LTCommand: Registry Write HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cPolicies%5cExplorer:NoCDBurning:-lt-i1		

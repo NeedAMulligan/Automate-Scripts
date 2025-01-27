@@ -1,0 +1,16 @@
+	Statement		
+1	Note: Verify Windows Server		
+2	IF NOT @os@  Contains  windows server  THEN  Exit Script		
+3	Create Folder: %windir%\ltsvc\packages\%scriptname%		
+4	Note: Download Intergrated Smart Update Tools		
+5	DOWNLOAD:  https://downloads.hpe.com/pub/softlib2/software1/sc-windows/p1097936692/v242046/cp059410.exe  saved to  %windir%\ltsvc\packages\%scriptname%\cp059410.exe  and wait until finish.		
+6	LOG:  Downloaded HP Intergrated Smart Update Tools on %computername%		
+7	Note: Install Integrated Smart Update Tools		
+8	"SHELL:  ""C:\windows\ltsvc\packages\%scriptname%\cp059410.exe"" /s and store the result in %shellresult%"		
+9	LOG:  Installed Integrated Smart Update Tools on %computername%		
+10	Sleep 30 seconds		
+11	Resend Software		
+12	IF NOT SOFTWARE INSTALLED Integrated Smart Update Tools for Windows  THEN  Jump to :Software NOT Installed		
+13	Exit Script		
+14	:Software NOT Installed - Label		
+16	LOG:  HP Intergrated Smart Update Tools NOT INSTALLED on %computername%		

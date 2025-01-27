@@ -1,0 +1,5 @@
+	Statement		
+1	IF FILE Not Exists  %Windir%\LTsvc\Packages\HPIA\HPIA\HPImageAssistant.exe  THEN  Jump to :Install HPIA		
+2	:Install HPIA - Label		
+3	RUN SCRIPT:  Software\HPIA\HPIA - DL & Install HP Imaging Assistant 5.3.0		
+4	Send Email To:[email address] Subject:Installed HPIA on %ComputerName%		
