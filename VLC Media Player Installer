@@ -1,0 +1,17 @@
+Note: Verify Windows
+GET:  @friendlyname@  =  [EXTRAFIELD FriendlyName]
+LOG:  @friendlyname@
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\VLC
+DOWNLOAD:  https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.exe  saved to  %windir%\LTSVC\Packages\VLC\vlc-3.0.20-win64.exe  and wait until finish.
+LOG:  Downloaded VLC Media Player %shellresult%
+SHELL:  "%windir%\LTSVC\Packages\VLC\vlc-3.0.20-win64.exe" /L=1033 /S  and store the result in %shellresult%
+LOG:  Installed VLC on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED VLC media player  THEN  Jump to :Software Not Installed
+Exit Script
+:Software Not Installed - Label
+Send Email To:EMAIL@EMAIL.COM Subject:Unable to install VLC media player on %ComputerName%
+LOG:  VLC media player NOT INSTALLED on %computername%
+Exit Script
