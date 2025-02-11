@@ -1,20 +1,19 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	   Create Folder: C:\Windows\LTSvc\packages\Fortinet		
-4	   DELETE:  C:\Windows\LTSVC\Packages\Fortinet\FortiClient.msi		
-5	   DELETE:  C:\Windows\LTSvc\packages\Fortinet\FortiClient.mst		
-6	   DOWNLOAD:  /Labtech/Transfer/Software/Fortinet/FortiClient.msi  saved to  C:\Windows\LTSVC\Packages\Fortinet\FortiClient.msi		
-7	   LOG:  Successfully Downloaded FortiClient.msi		
-8	   DOWNLOAD:  /Labtech/Transfer/Software/Fortinet/FortiClient.mst  saved to  C:\Windows\LTSvc\packages\Fortinet\FortiClient.mst		
-9	   LOG:  Successfully Downloaded FortiClient Transform		
-10	   LOG:  Downloaded %scriptname% on %computername% successfully		
-11	   SHELL:  C:\Windows\LTSvc\packages\Fortinet\FortiClient.msi TRANSFORMS=FortiClient.mst /quiet /norestart /log FortiClientVPN.log and store the result in %shellresult%		
-12	   LOG:  Installed %scriptname% on %computername% successfully		
-13	   Sleep 30 seconds		
-14	   Resend Software		
-15	   IF NOT SOFTWARE INSTALLED FortiClient  THEN  Jump to :Software NOT Installed		
-16	   Exit Script		
-17	   :Software NOT Installed - Label		
-18	   Send Email To:[email address] Subject:FortiClient NOT installed on %computername%		
-19	   LOG:  %scriptname% NOT INSTALLED on %computername%		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+   Create Folder: C:\Windows\LTSvc\packages\Fortinet
+   DELETE:  C:\Windows\LTSVC\Packages\Fortinet\FortiClient.msi
+   DELETE:  C:\Windows\LTSvc\packages\Fortinet\FortiClient.mst
+   DOWNLOAD:  /Labtech/Transfer/Software/Fortinet/FortiClient.msi  saved to  C:\Windows\LTSVC\Packages\Fortinet\FortiClient.msi
+   LOG:  Successfully Downloaded FortiClient.msi
+   DOWNLOAD:  /Labtech/Transfer/Software/Fortinet/FortiClient.mst  saved to  C:\Windows\LTSvc\packages\Fortinet\FortiClient.mst
+   LOG:  Successfully Downloaded FortiClient Transform
+   LOG:  Downloaded %scriptname% on %computername% successfully
+   SHELL:  C:\Windows\LTSvc\packages\Fortinet\FortiClient.msi TRANSFORMS=FortiClient.mst /quiet /norestart /log FortiClientVPN.log and store the result in %shellresult%
+   LOG:  Installed %scriptname% on %computername% successfully
+   Sleep 30 seconds
+   Resend Software
+   IF NOT SOFTWARE INSTALLED FortiClient  THEN  Jump to :Software NOT Installed
+   Exit Script
+   :Software NOT Installed - Label
+   Send Email To:helpdesk@ewa.com Subject:FortiClient NOT installed on %computername%
+   LOG:  %scriptname% NOT INSTALLED on %computername%

@@ -1,6 +1,5 @@
-	Statement		
-1	Create Folder: %windir%\LTSVC\Packages\GerbView		
-2	DOWNLOAD:  https://www.gerbview.com/download/gv10x64.exe  saved to  %windir%\LTSVC\Packages\GerbView\gv10x64.exe  and wait until finish.		
-3	LOG:  Downloaded GerbView on %computername% successfully		
-4	"SHELL:  ""%windir%\LTSVC\Packages\GerbView\gv10x64.exe"" /verysilent /norestart and store the result in %shellresult%"		
-5	LOG:  Installed GerbView on %computername% successfully		
+Create Folder: %windir%\LTSVC\Packages\GerbView
+DOWNLOAD:  https://www.gerbview.com/download/gv10x64.exe  saved to  %windir%\LTSVC\Packages\GerbView\gv10x64.exe  and wait until finish.
+LOG:  Downloaded GerbView on %computername% successfully
+SHELL:  "%windir%\LTSVC\Packages\GerbView\gv10x64.exe" /verysilent /norestart and store the result in %shellresult%
+LOG:  Installed GerbView on %computername% successfully

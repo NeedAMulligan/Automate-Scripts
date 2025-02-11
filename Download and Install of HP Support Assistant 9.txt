@@ -1,7 +1,6 @@
-	Statement		
-1	Create Folder: %windir%\LTSVC\Packages\HP		
-2	   LOG:  Created HP Folder on %computername%		
-3	DOWNLOAD:  /Labtech/Transfer/Software/HPSupportAssistant/HPSupportAssistant.exe  saved to  %windir%\LTSVC\Packages\HP\HPSupportAssistant.exe		
-4	   LOG:  Downloaded HP Support Assistant 9 to Folder on %computername%		
-5	"SHELL:  ""C:\Windows\LTSvc\packages\HP\HPSupportAssistant.exe"" /S and store the result in %shellresult%"		
-6	   LOG:  Installed HP Support Assistant 9 on %computername%		
+Create Folder: %windir%\LTSVC\Packages\HP
+   LOG:  Created HP Folder on %computername%
+DOWNLOAD:  /Labtech/Transfer/Software/HPSupportAssistant/HPSupportAssistant.exe  saved to  %windir%\LTSVC\Packages\HP\HPSupportAssistant.exe
+   LOG:  Downloaded HP Support Assistant 9 to Folder on %computername%
+SHELL:  "C:\Windows\LTSvc\packages\HP\HPSupportAssistant.exe" /S and store the result in %shellresult%
+   LOG:  Installed HP Support Assistant 9 on %computername%

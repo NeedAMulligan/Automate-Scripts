@@ -1,21 +1,20 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	Note: Uninstall Cisco AnyConnect Client		
-4	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-5	Note: Uninstall Cisco AnyConnect Start Before Login Module		
-6	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-7	Note: Uninstall Cisco AnyConnect Diagnostics and Reporting Tool		
-8	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-9	Note: Uninstall Cisco AnyConnect AMP Enabler Module		
-10	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-11	Note: Uninstall Cisco AnyConnect ISE Posture Module		
-12	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-13	Note: Uninstall Cisco AnyConnect Network Access Manager		
-14	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-15	Note: Uninstall Cisco AnyConnect Network Visibility Module		
-16	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-17	Note: Uninstall Cisco AnyConnect Posture Module		
-18	   Execute PowerShell Script as Local and store result in: @powershellresult@		
-19	Note: Uninstall Cisco AnyConnect Umbrella Roaming Security Module		
-20	   Execute PowerShell Script as Local and store result in: @powershellresult@		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Note: Uninstall Cisco AnyConnect Client
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect Start Before Login Module
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect Diagnostics and Reporting Tool
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect AMP Enabler Module
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect ISE Posture Module
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect Network Access Manager
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect Network Visibility Module
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect Posture Module
+   Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Uninstall Cisco AnyConnect Umbrella Roaming Security Module
+   Execute PowerShell Script as Local and store result in: @powershellresult@

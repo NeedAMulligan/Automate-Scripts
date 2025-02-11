@@ -1,12 +1,10 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	Note: Check if component store cleanup is recommended		
-4	Execute PowerShell Script as Local and store result in: @powershellresult@		
-	DISM /online /cleanup-image /analyzecomponentstore		
-5	IF  @powershellresult@  Contains  Yes  THEN  Jump to :Component Store Cleanup Recommended		
-6	Exit Script		
-7	:Component Store Cleanup Recommended - Label		
-8	Note: Start component store cleanup		
-9	POWERSHELL:  Dism /Online /Cleanup-Image /StartComponentCleanup /ResetBase and store the result in %powershellresult%		
-10	POWERSHELL:  Dism /Online /Cleanup-Image /SPSuperseded and store the result in %powershellresult%		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Note: Check if component store cleanup is recommended
+Execute PowerShell Script as Local and store result in: @powershellresult@
+IF  @powershellresult@  Contains  Yes  THEN  Jump to :Component Store Cleanup Recommended
+Exit Script
+:Component Store Cleanup Recommended - Label
+Note: Start component store cleanup
+POWERSHELL:  Dism /Online /Cleanup-Image /StartComponentCleanup /ResetBase and store the result in %powershellresult%
+POWERSHELL:  Dism /Online /Cleanup-Image /SPSuperseded and store the result in %powershellresult%

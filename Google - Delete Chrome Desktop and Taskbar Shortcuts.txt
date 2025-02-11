@@ -1,0 +1,2 @@
+Execute PowerShell Script as Local and store result in: @powershellresult@
+   LOG:  Deleted Google Chrome Desktop Shortcut on %computername%

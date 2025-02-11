@@ -1,4 +1,3 @@
-	Statement		
-1	POWERSHELL:  Get-BitLockerVolume -MountPoint C | Format-List and store the result in %powershellresult%		
-2	LOG:  %powershellresult%		
-3	Exit Script		
+POWERSHELL:  Get-BitLockerVolume -MountPoint C | Format-List and store the result in %powershellresult%
+LOG:  %powershellresult%
+Exit Script

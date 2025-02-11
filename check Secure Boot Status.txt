@@ -1,0 +1,3 @@
+POWERSHELL:  Confirm-SecureBootUEFI and store the result in %powershellresult%
+LOG:  %powershellresult%
+Exit Script

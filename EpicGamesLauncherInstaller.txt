@@ -1,15 +1,14 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	Create Folder: %windir%\LTSVC\Packages\EPIC		
-4	DOWNLOAD:  https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi?productName=unrealEngine  saved to  C:\Windows\LTSvc\packages\EPIC\epic.msi  and wait until finish.		
-5	LOG:  Downloaded %scriptname% on %computername% successfully		
-6	"SHELL:  ""C:\Windows\LTSvc\packages\EPIC\epic.msi"" and store the result in %shellresult%"		
-7	LOG:  Installed %scriptname% on %computername% successfully		
-8	Sleep 30 seconds		
-9	Resend Software		
-10	IF NOT SOFTWARE INSTALLED Epic Games Launcher  THEN  Jump to :Software NOT Installed		
-11	Exit Script		
-12	:Software NOT Installed - Label		
-13	Send Email To:[email address] Subject:Unable to install %scriptname% on %ComputerName%		
-14	LOG:  Epic Games Launcher NOT INSTALLED on %computername%		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\EPIC
+DOWNLOAD:  https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi?productName=unrealEngine  saved to  C:\Windows\LTSvc\packages\EPIC\epic.msi  and wait until finish.
+LOG:  Downloaded %scriptname% on %computername% successfully
+SHELL:  "C:\Windows\LTSvc\packages\EPIC\epic.msi" and store the result in %shellresult%
+LOG:  Installed %scriptname% on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED Epic Games Launcher  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:Unable to install %scriptname% on %ComputerName%
+LOG:  Epic Games Launcher NOT INSTALLED on %computername%

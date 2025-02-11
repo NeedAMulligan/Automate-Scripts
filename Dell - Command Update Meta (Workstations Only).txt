@@ -1,18 +1,17 @@
-	Statement		
-1	Note: Verify W10		
-2	IF NOT @os@  Contains  windows 10  THEN  Exit Script		
-3	Note: Install Dell Command Update		
-4	Create Folder: %windir%\LTSVC\Packages\dell		
-5	DOWNLOAD:  /Labtech/Transfer/Software/Dell/Dell-Command-Update_WIN_4.6.0_A00.EXE  saved to  %windir%\LTSVC\Packages\Dell\Dell-Command-Update_WIN_4.6.0_A00.exe		
-6	LOG:  Downloaded 		
-7	"SHELL:  ""%windir%\LTSVC\Packages\Dell\Dell-Command-Update_WIN_4.6.0_A00.exe"" /s and store the result in %shellresult%"		
-8	LOG:  Installed 		
-9	Note: Configure Dell Command Update		
-10	"SHELL:  ""C:\Program Files\Dell\CommandUpdate\dcu-cli.exe"" /configure -updateSeverity=security,critical,recommended,optional and store the result in %shellresult%"		
-11	LOG:  Configured		
-12	Note: Scan Dell Command Update		
-13	"SHELL:  ""C:\Program Files\Dell\CommandUpdate\dcu-cli.exe"" /scan -silent and store the result in %shellresult%"		
-14	LOG:  Scanned		
-15	Note: Apply Dell Command Update		
-16	"SHELL:  ""C:\Program Files\Dell\CommandUpdate\dcu-cli.exe"" /applyupdates -silent and store the result in %shellresult%"		
-17	Note: Applied		
+Note: Verify W10
+IF NOT @os@  Contains  windows 10  THEN  Exit Script
+Note: Install Dell Command Update
+Create Folder: %windir%\LTSVC\Packages\dell
+DOWNLOAD:  /Labtech/Transfer/Software/Dell/Dell-Command-Update_WIN_4.6.0_A00.EXE  saved to  %windir%\LTSVC\Packages\Dell\Dell-Command-Update_WIN_4.6.0_A00.exe
+LOG:  Downloaded 
+SHELL:  "%windir%\LTSVC\Packages\Dell\Dell-Command-Update_WIN_4.6.0_A00.exe" /s and store the result in %shellresult%
+LOG:  Installed 
+Note: Configure Dell Command Update
+SHELL:  "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /configure -updateSeverity=security,critical,recommended,optional and store the result in %shellresult%
+LOG:  Configured
+Note: Scan Dell Command Update
+SHELL:  "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /scan -silent and store the result in %shellresult%
+LOG:  Scanned
+Note: Apply Dell Command Update
+SHELL:  "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /applyupdates -silent and store the result in %shellresult%
+Note: Applied

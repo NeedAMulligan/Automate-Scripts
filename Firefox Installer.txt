@@ -1,8 +1,7 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	Create Folder: %windir%\LTSVC\Packages\firefox		
-4	DOWNLOAD:  https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US  saved to  %windir%\LTSVC\Packages\Firefox\Firefox Installer.exe  and wait until finish.		
-5	   LOG:  Downloaded Firefox on %computername% successfully		
-6	"SHELL:  ""%windir%\LTSVC\Packages\Firefox\Firefox Installer.exe"" /s and store the result in %shellresult%"		
-7	   LOG:  Installed Firefox on %computername% successfully		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\firefox
+DOWNLOAD:  https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US  saved to  %windir%\LTSVC\Packages\Firefox\Firefox Installer.exe  and wait until finish.
+   LOG:  Downloaded Firefox on %computername% successfully
+SHELL:  "%windir%\LTSVC\Packages\Firefox\Firefox Installer.exe" /s and store the result in %shellresult%
+   LOG:  Installed Firefox on %computername% successfully

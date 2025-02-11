@@ -1,4 +1,3 @@
-	Statement		
-1	"LTCommand: Execute Command CMD!!!/C ""CD /D ""%windir%\system32"" && sc config ""spooler"" start= disabled"""		
-2	"LTCommand: Execute Command CMD!!!/C ""CD /D ""%windir%\system32"" && sc stop ""spooler"""		
-3	   LOG:  Stopped and Disabled Spooler Service on %computername%		
+LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && sc config "spooler" start= disabled"
+LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && sc stop "spooler"
+   LOG:  Stopped and Disabled Spooler Service on %computername%

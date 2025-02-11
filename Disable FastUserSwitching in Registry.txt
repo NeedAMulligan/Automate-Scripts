@@ -1,7 +1,6 @@
-	Statement		
-1	LTCommand: Send RegKey Cache HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies		
-2	LTCommand: Registry Read HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cPolicies%5cSystem:HideFastUserSwitching		
-3	LTCommand: Registry Write HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cPolicies%5cSystem:HideFastUserSwitching:-lt-i1		
-4	LOG:  Disabled Fast User Switching in Registry by setting value to 1		
-5	Send Email To:[email address] Subject:Disabled Fast User Switching in Registry on %ComputerName%		
-6	Exit Script		
+LTCommand: Send RegKey Cache HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
+LTCommand: Registry Read HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cPolicies%5cSystem:HideFastUserSwitching
+LTCommand: Registry Write HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cPolicies%5cSystem:HideFastUserSwitching:-lt-i1
+LOG:  Disabled Fast User Switching in Registry by setting value to 1
+Send Email To:helpdesk@ewa.com Subject:Disabled Fast User Switching in Registry on %ComputerName%
+Exit Script

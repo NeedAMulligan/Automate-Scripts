@@ -1,5 +1,1 @@
-	Statement		
-1	Execute PowerShell Script as Local and store result in: @@		
-	"$path = 'HKLM:\SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown'
-if (!(Test-Path -LiteralPath $path)) { [void] (New-Item -Path $path -Force) }
-Set-ItemProperty -Path $path -Name bEnableAV2Enterprise -Value 0 -Type Dword"		
+Execute PowerShell Script as Local and store result in: @@

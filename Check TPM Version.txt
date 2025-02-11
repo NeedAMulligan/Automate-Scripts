@@ -1,6 +1,2 @@
-	Statement		
-1	POWERSHELL:  tpmtool getdeviceinformation and store the result in %powershellresult%		
-2	LOG:  %powershellresult%		
-3	GET:  @friendlyname@  =  [EXTRAFIELD FriendlyName]		
-4	Send Email To:helpdesk@ewa.com Subject:%ComputerName% Not Windows 11 Ready - TPM Information @friendlyname@		
-5	Exit Script		
+POWERSHELL:  $PSVersionTable.PSVersion and store the result in %powershellresult%
+LOG:  Powershell version %shellresult%

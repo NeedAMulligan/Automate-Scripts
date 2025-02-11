@@ -1,3 +1,2 @@
-	Statement		
-1	SHELL:  reg import c:\windows\ltsvc\packages\Follina\ms-msdt and store the result in %shellresult%		
-2	   LOG:  Imported MS-MSDT reg key on %computername% 		
+SHELL:  reg import c:\windows\ltsvc\packages\Follina\ms-msdt and store the result in %shellresult%
+   LOG:  Imported MS-MSDT reg key on %computername% 

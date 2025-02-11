@@ -1,5 +1,4 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	"SHELL:  ""C:\Program Files\FreeCAD 0.18\Uninstall-FreeCAD.exe"" /S and store the result in %shellresult%"		
-4	   LOG:  Uninstalled FreeCAD 0.18.4 on %ComputerName%		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+SHELL:  "C:\Program Files\FreeCAD 0.18\Uninstall-FreeCAD.exe" /S and store the result in %shellresult%
+   LOG:  Uninstalled FreeCAD 0.18.4 on %ComputerName%

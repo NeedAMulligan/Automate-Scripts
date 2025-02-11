@@ -1,4 +1,3 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	SHELL:  cleanmgr /verylowdisk and store the result in %shellresult%		
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+SHELL:  cleanmgr /verylowdisk and store the result in %shellresult%
