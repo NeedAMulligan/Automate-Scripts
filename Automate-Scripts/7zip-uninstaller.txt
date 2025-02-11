@@ -1,7 +1,0 @@
-	Statement		
-1	"SHELL:  ""C:\Program Files\7-Zip\Uninstall.exe"" /S and store the result in %shellresult%"		
-2	LOG:  Ran uninstaller to remove 7zip on %computername%		
-3	Resend Software		
-4	IF FILE Not Exists  C:\Program Files\7-Zip\7z.exe  THEN  Jump to :Confirmed Uninstalled		
-5	:Confirmed Uninstalled - Label		
-6	LOG:  Confirmed uninstall of 7zip on %computername%		
