@@ -1,7 +1,0 @@
-LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && WMIC product where name="Apple Application Support (32-bit)" call uninstall /nointeractive"
-   LOG:  Uninstalled Apple Aplication Support 32-Bit with WMIC on %computername%
-LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && WMIC product where name="Apple Application Support (64-bit)" call uninstall /nointeractive"
-   LOG:  Uninstalled Apple Aplication Support 64-Bit with WMIC on %computername%
-LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && WMIC product where name="Apple Mobile Device Support" call uninstall /nointeractive"
-   LOG:  Uninstalled Apple Mobile Device Support with WMIC on %computername%
-Resend Software
