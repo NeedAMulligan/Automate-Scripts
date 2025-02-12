@@ -10,5 +10,5 @@ Resend Software
 IF NOT SOFTWARE INSTALLED Google Earth Pro  THEN  Jump to :Software NOT Installed
 Exit Script
 :Software NOT Installed - Label
-Send Email To:helpdesk@ewa.com Subject:Unable to install %scriptname% on %ComputerName%
+Send Email To:EMAIL@EMAIL.COM Subject:Unable to install %scriptname% on %ComputerName%
 LOG:  Google Earth Pro NOT INSTALLED on %computername%
