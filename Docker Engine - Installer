@@ -3,10 +3,10 @@
 2	IF NOT @os@  Contains  windows  THEN  Exit Script		
 3	   Note: Enabling Windows Container feature		
 4	      LOG:  Enabling Windows Container feature		
-5	         POWERSHELL:  Enable-WindowsOptionalFeature -Online -FeatureName containers –All -Norestart and store the result in %powershellresult%		
+5	         POWERSHELL:  Enable-WindowsOptionalFeature -Online -FeatureName containers â€“All -Norestart and store the result in %powershellresult%		
 6	   Note: Enabling Windows Hyper-V feature		
 7	      LOG:  Enabling Windows Hyper-V feature		
-8	         POWERSHELL:  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V –All -Norestart and store the result in %powershellresult%		
+8	         POWERSHELL:  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V â€“All -Norestart and store the result in %powershellresult%		
 9	   Note: Restarting computer and waiting for 5 minutes		
 10	      LOG:  Restarting computer and waiting for 5 minutes		
 11	         RUN SCRIPT:  Windows\Reboot\Reboot - Immediately		
