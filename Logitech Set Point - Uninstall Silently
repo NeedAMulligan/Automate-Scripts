@@ -1,0 +1,13 @@
+IF FILE Exists  C:\Program Files\Common Files\LogiShrd\sp6\UnInstaller.exe  THEN  Jump to :Uninstall Logitech Set Point 6
+   :Uninstall Logitech Set Point 6 - Label
+      SHELL:  "C:\Program Files\Common Files\LogiShrd\sp6\UnInstaller.exe" /s /uninstall=yes and store the result in %shellresult%
+         LOG:  Removed Logitech Set Point on %computername%
+IF FILE Exists  C:\Program Files\Common Files\LogiShrd\sp6_Uninstall\MUnInstaller.exe  THEN  Jump to :Uninstall Logitech sp6
+   :Uninstall Logitech sp6 - Label
+      SHELL:  "C:\Program Files\Common Files\LogiShrd\sp6_Uninstall\MUnInstaller.exe" /s /uninstall=yes and store the result in %shellresult%
+         LOG:  Removed Logitech sp6 on %computername%
+Delete Folder: "C:\Program Files\Common Files\LogiShrd\sp6_Uninstall"
+         LOG:  Deleted sp6_uninstall folder on %computername%
+Delete Folder: "C:\Program Files\Common Files\LogiShrd\sp6"
+         LOG:  Deleted sp6 folder on %computername%
+Resend Software
