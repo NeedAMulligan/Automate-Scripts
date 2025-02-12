@@ -1,5 +1,5 @@
 	Statement		
 1	POWERSHELL:   Set-ExecutionPolicy bypass and store the result in %powershellresult%		
 2	POWERSHELL:  Get-HPBIOSSettingsList and store the result in %powershellresult%		
-3	Send Email To:helpdesk@ewa.com Subject:HP Settings List for %ComputerName%		
+3	Send Email To:EMAIL@EMAIL.COM Subject:HP Settings List for %ComputerName%		
 4	POWERSHELL:   Set-ExecutionPolicy default and store the result in %powershellresult%		
