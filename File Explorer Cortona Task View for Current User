@@ -1,0 +1,3 @@
+LTCommand: Registry Write HKCU%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cExplorer%5cAdvanced:LaunchTo:-lt-i1
+LTCommand: Registry Write HKCU%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cExplorer%5cAdvanced:ShowTaskViewButton:-lt-i0
+LTCommand: Registry Write HKCU%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cExplorer%5cAdvanced:ShowCortanaButton:-lt-i0
