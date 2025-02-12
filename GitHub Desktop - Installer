@@ -11,5 +11,5 @@ IF NOT SOFTWARE INSTALLED GitHub Desktop Deployment Tool  THEN  Jump to :Softwar
 LOG:  Installed GitHub Desktop on %computername% successfully
 Exit Script
 :Software NOT Installed - Label
-Send Email To:helpdesk@ewa.com Subject:Unable to install GitHub Desktop on %ComputerName%
+Send Email To:EMAIL@EMAIL.COM Subject:Unable to install GitHub Desktop on %ComputerName%
 LOG:  GitHub Desktop NOT INSTALLED on %computername%
