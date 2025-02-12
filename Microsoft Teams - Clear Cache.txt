@@ -1,6 +1,0 @@
-Note: Verify Windows
-IF NOT @os@  Contains  windows  THEN  Exit Script
-RUN SCRIPT:  _System Automation\Copy of Show Client Variables
-RUN SCRIPT:  _System Automation\Copy of Show Variables*
-SHELL:  taskkill /im teams.exe /f and store the result in %shellresult%
-SHELL:  del /S C:\Users\USER\\AppData\roaming\Microsoft\Teams\* /q /s and store the result in %shellresult%
