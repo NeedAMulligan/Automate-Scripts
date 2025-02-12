@@ -1,0 +1,13 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\ltsvc\packages\NotepadPlusPlus
+POWERSHELL:  Invoke-WebRequest -Uri https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.7/npp.8.6.7.Installer.x64.exe -Outfile C:\Windows\ltsvc\packages\NotepadPlusPlus\npp.8.6.7.Installer.x64.exe and store the result in %powershellresult%
+LOG:  Downloaded NotepadPlusPlus successfully
+SHELL:  %windir%\LTSVC\Packages\NotepadPlusPlus\npp.8.6.7.Installer.x64.exe /S and store the result in %shellresult%
+LOG:  Installed NotepadPlusPlus successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED Notepad++ (64-bit x64)  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:Unable to install Notepad++ on %ComputerName%
