@@ -1,0 +1,28 @@
+"Installs Visual Studio Community 2022:
+-ASP.net Web Development Microsoft.VisualStudio.Workload.NetWeb
+-.Net Desktop Development Microsoft.VisualStudio.Workload.ManagedDesktop
+-.NET MAUI UI Development Microsoft.VisualStudio.Workload.NetCrossPlat
+-Universal Windows Platform Development -Microsoft.VisualStudio.Workload.Universal
+-Python Development Microsoft.VisualStudio.Workload.Python
+-Node.js development Microsoft.VisualStudio.Workload.Node
+-Desktop Development for C++ Microsoft.VisualStudio.Workload.NativeDesktop
+-Data Storage and Processing Microsoft.VisualStudio.Workload.Data
+
+May take about 60min to complete"
+Statement
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\%scriptname%
+DOWNLOAD:  https://aka.ms/vs/17/release/vs_Community.exe  saved to  C:\Windows\LTSvc\packages\%scriptname%\%scriptname%.exe  and wait until finish.
+LOG:  Downloaded %scriptname% on %computername% successfully
+SHELL:  "C:\Windows\LTSvc\packages\%scriptname%\%scriptname%.exe" --layout "C:\Windows\LTSvc\packages\Visual Studio Community 2022\vs_Community" --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetCrossPlat --add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Workload.Python --add Microsoft.VisualStudio.Workload.Node --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.Data --includeRecommended --includeOptional --lang en-US and store the result in %shellresult%
+Sleep 3600 seconds
+SHELL:  "C:\Windows\LTSvc\packages\Visual Studio Community 2022 Huuntsville\vs_Community\vs_setup.exe" --nocache --wait --noUpdateInstaller --noWeb --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetCrossPlat --add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Workload.Python --add Microsoft.VisualStudio.Workload.Node --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.Data --includeRecommended --includeOptional --quiet --norestart and store the result in %shellresult%
+LOG:  Installed %scriptname% on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED Visual Studio Community 2022  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:Unable to install %scriptname% on %computername%
+LOG:  %scriptname% NOT INSTALLED on %computername%
