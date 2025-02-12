@@ -12,6 +12,6 @@ IF NOT SOFTWARE INSTALLED Git  THEN  Jump to :Software NOT Installed
 LOG:  Installed Git For Windows on %computername% successfully
 Exit Script
 :Software NOT Installed - Label
-Send Email To:helpdesk@ewa.com Subject:Unable to install %scriptname% on %ComputerName%
+Send Email To:EMAIL@EMAIL.COM Subject:Unable to install %scriptname% on %ComputerName%
 LOG:  Git For Windows NOT INSTALLED on %computername%
 Exit Script
