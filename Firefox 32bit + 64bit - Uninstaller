@@ -1,0 +1,17 @@
+IF FILE Exists  C:\Program Files (x86)\Mozilla Firefox\uninstall\helper.exe  THEN  Jump to :Uninstall Firefox (x86)
+   :Uninstall Firefox (x86) - Label
+      SHELL:  "C:\Program Files (x86)\Mozilla Firefox\uninstall\helper.exe" -ms and store the result in %shellresult%
+IF FILE Exists  C:\Program Files\Mozilla Firefox\uninstall\helper.exe  THEN  Jump to :Uninstall Firefox 64-bit
+   :Uninstall Firefox 64-bit - Label
+      SHELL:  "C:\Program Files\Mozilla Firefox\uninstall\helper.exe" -ms and store the result in %shellresult%
+IF FILE Exists  C:\Program Files (x86)\Mozilla Maintenance Service\uninstall.exe  THEN  Jump to :Uninstall Firefox Maintenance (x86)
+   :Uninstall Firefox Maintenance (x86) - Label
+      SHELL:  "C:\Program Files (x86)\Mozilla Maintenance Service\uninstall.exe" -ms and store the result in %shellresult%
+IF FILE Exists  C:\Program Files\Mozilla Maintenance Service\uninstall.exe  THEN  Jump to :Uninstall Firefox Maintenance 64-bit
+   :Uninstall Firefox Maintenance 64-bit - Label
+      SHELL:  "C:\Program Files\Mozilla Maintenance Service\uninstall.exe" -ms and store the result in %shellresult%
+         LOG:  Removed Firefox on %computername%
+IF FILE Exists  "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox Private Browsing.lnk"  THEN  Jump to :removefirefoxshortcut
+   :removefirefoxshortcut - Label
+      SHELL:  del /f "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox Private Browsing.lnk" and store the result in %shellresult%
+LOG:  %ShellResult%
