@@ -30,6 +30,6 @@
 29	RUN SCRIPT:  Windows\BitLocker\Bitlocker Status = Protection On or Off | Sets Extra Data Field to Yes or No or Restart		
 30	Exit Script		
 31	:Bitlocked Not Enabled - Label		
-32	Send Email To:helpdesk@ewa.com Subject:[BITLOCKER] - %ComputerName% not able to complete process		
+32	Send Email To:EMAIL@EMAIL.COM Subject:[BITLOCKER] - %ComputerName% not able to complete process		
 33	RUN SCRIPT:  Windows\BitLocker\Bitlocker Status = Protection On or Off | Sets Extra Data Field to Yes or No or Restart		
 34	Script Exit with Error		
