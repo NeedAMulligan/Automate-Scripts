@@ -1,0 +1,14 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\ltsvc\packages\Pycharm Community
+DOWNLOAD:  /Labtech/Transfer/Software/Pycharm Community/silentconfig.txt  saved to  %windir%\ltsvc\packages\Pycharm Community\silent.config
+POWERSHELL:  Invoke-WebRequest -Uri https://download.jetbrains.com/python/pycharm-community-2024.2.3.exe -Outfile "C:\Windows\ltsvc\packages\Pycharm Community\pycharm-community.exe" and store the result in %powershellresult%
+SHELL:  "%windir%\ltsvc\packages\Pycharm Community\pycharm-community.exe" /S /LOG=c:\windows\ltsvc\packages\PyCharm Community\install.log /Config="C:\windows\ltsvc\packages\Pycharm Community\silent.config"  and store the result in %shellresult%
+LOG:  Installed PyCharm Community Edition on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED PyCharm Community Edition 2024.2.3  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:Unable to install Pycharm Community Edition on %ComputerName%
+LOG:  PyCharm Community Edition NOT INSTALLED on %computername%
