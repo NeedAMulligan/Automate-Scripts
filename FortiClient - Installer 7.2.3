@@ -15,5 +15,5 @@ IF NOT @os@  Contains  windows  THEN  Exit Script
    IF NOT SOFTWARE INSTALLED FortiClient  THEN  Jump to :Software NOT Installed
    Exit Script
    :Software NOT Installed - Label
-   Send Email To:helpdesk@ewa.com Subject:FortiClient NOT installed on %computername%
+   Send Email To:EMAIL@EMAIL.COM Subject:FortiClient NOT installed on %computername%
    LOG:  %scriptname% NOT INSTALLED on %computername%
