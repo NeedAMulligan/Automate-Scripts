@@ -10,5 +10,5 @@ Resend Software
 IF NOT SOFTWARE INSTALLED WinSCP  THEN  Jump to :Software NOT Installed
 Exit Script
 :Software NOT Installed - Label
-Send Email To:helpdesk@ewa.com Subject:failed to install WinSCP on %computername%
+Send Email To:EMAIL@EMAIL.COM Subject:failed to install WinSCP on %computername%
 LOG:  WinSCP NOT INSTALLED on %computername%
