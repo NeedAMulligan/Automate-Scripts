@@ -8,4 +8,4 @@
 13	"SHELL:  ""C:\Program Files (x86)\Common Files\Adobe\AdobeGCClient\agshelper.exe"" --UninstallUserDriven and store the result in %shellresult%"		
 14	LOG:  Successfully Uninstalled Adobe Genuine Service		
 15	Resend Software		
-16	Send Email To:helpdesk@ewa.com Subject:Successfully Uninstalled Adobe Acrobat DC from %computername%		
+16	Send Email To:EMAIL@EMAIL.COM Subject:Successfully Uninstalled Adobe Acrobat DC from %computername%		
