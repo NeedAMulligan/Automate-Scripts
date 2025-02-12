@@ -1,0 +1,8 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Note: Uninstalling Mozilla Firefox with Powershell
+Execute PowerShell Script as Local and store result in: @powershellresult@
+RUN SCRIPT:  Software\Firefox\Delete Firefox Desktop Shortcut
+LOG:  Uninstalled Mozilla Firefox
+Sleep 15 seconds
+Resend Software
