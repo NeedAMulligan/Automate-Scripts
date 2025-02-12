@@ -1,0 +1,10 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\ltsvc\packages\TortoiseGit
+DOWNLOAD:  https://download.tortoisegit.org/tgit/2.15.0.0/TortoiseGit-2.15.0.1-Hotfix-64bit.exe  saved to  %windir%\ltsvc\packages\TortoiseGit\TortoiseGit-2.15.0.1-Hotfix-64bit.exe  and wait until finish.
+LOG:  Downloaded TortoiseGit HotFix successfully
+SHELL:  "%windir%\ltsvc\packages\tortoisegit\TortoiseGit-2.15.0.1-Hotfix-64bit.exe" /SP- /VerySilent /NoRestart and store the result in %shellresult%
+LOG:  Installed TortoiseGit HotFix on %computername% successfully
+Sleep 15 seconds
+Resend Software
+Exit Script
