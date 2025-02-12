@@ -1,0 +1,22 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\%scriptname%
+DOWNLOAD:  https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi  saved to  C:\Windows\LTSvc\packages\%scriptname%\jdk-17_windows-x64_bin.msi  and wait until finish.
+LOG:  Downloaded Java Development Kit on %computername% successfully
+SHELL:  "C:\Windows\LTSvc\packages\%scriptname%\jdk-17_windows-x64_bin.msi" /qn /norestart and store the result in %shellresult%
+LOG:  Installed Java Development Kit on %computername% successfully
+DOWNLOAD:  /Labtech/Transfer/Software/Netbeans/state-21.xml  saved to  %windir%\ltsvc\packages\%scriptname%\state-21.xml
+LOG:  Downloaded configuration xml successfully
+DOWNLOAD:  https://dlcdn.apache.org/netbeans/netbeans-installers/21/Apache-NetBeans-21-bin-windows-x64.exe  saved to  %windir%\ltsvc\packages\%scriptname%\Apache-NetBeans-21-bin-windows-x64.exe  and wait until finish.
+LOG:  Downloaded %scriptname% on %computername% successfully
+SHELL:  %windir%\ltsvc\packages\%scriptname%\Apache-NetBeans-21-bin-windows-x64.exe --javahome "C:\Program Files\Java\jdk-17" --silent --state %windir%\ltsvc\packages\%scriptname%\state-21.xml and store the result in %shellresult%
+LOG:  Installed %scriptname% on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED Apache Netbeans IDE 21  THEN  Jump to :Software NOT Installed
+LOG:  Installed %scriptname% on %computername%
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:%scriptname% NOT Installed on %ComputerName%
+LOG:  %scriptname% NOT Installed on %computername%
+Exit Script
