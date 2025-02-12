@@ -1,0 +1,12 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Note: Uninstalling Google Chrome with Powershell
+LOG:  Uninstalling Google Chrome
+Execute PowerShell Script as Local and store result in: @powershellresult@
+Note: Deleting Desktop Shortcut and Pinned Icons
+LOG:  Deleting Desktop Shortcut and Pinned Icons
+RUN SCRIPT:  Software\Google Chrome\Delete Google Chrome Desktop & Taskbar Shortcuts
+LOG:  Deleted Desktop Shortcut and Pinned Icons
+LOG:  Uninstalled Google Chrome
+Sleep 15 seconds
+Resend Software
