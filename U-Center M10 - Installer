@@ -1,0 +1,12 @@
+Create Folder: %windir%\ltsvc\packages\%scriptname%
+DOWNLOAD:  https://u-center2-updates.u-blox.com/u-center2-installer.exe  saved to  %windir%\LTSvc\packages\%scriptname%\%scriptname%.exe  and wait until finish.
+LOG:  Downloaded %scriptname% on %computername% successfully
+SHELL:  "C:\Windows\LTSvc\packages\%scriptname%\%scriptname%.exe" /S ALLUSERS=1 and store the result in %shellresult%
+LOG:  Installed %scriptname% on %computername% successfully
+Sleep 15 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED u-center2 23.3.54868  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:Unable to install %scriptname% on %ComputerName%
+LOG:  %scriptname% NOT INSTALLED on %computername%
