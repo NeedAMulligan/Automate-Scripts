@@ -7,5 +7,5 @@ IF NOT SOFTWARE INSTALLED Logitech G HUB  THEN  Jump to :Software NOT Installed
 LOG:  Installed Logitech G Hub Software on %computername%
 Exit Script
 :Software Not Installed - Label
-Send Email To:helpdesk@ewa.com Subject:Logitech G Hub Software Not Installed on %ComputerName%
+Send Email To:EMAIL@EMAIL.COM Subject:Logitech G Hub Software Not Installed on %ComputerName%
 Exit Script
