@@ -1,6 +1,0 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	"SHELL:  ""C:\Program Files (x86)\Common Files\Adobe\AdobeGCClient\agshelper.exe"" --UninstallUserDriven and store the result in %shellresult%"		
-4	Sleep 15 seconds		
-5	Resend Software		

@@ -1,9 +1,0 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	Create Folder: %windir%\LTSVC\Packages\DWGTrueView		
-4	DOWNLOAD:  https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/EC2FCD9E-AC4D-3E9D-8526-96832A231455/SFX/DWGTrueView_2023_English_64bit_dlm.sfx.exe  saved to  %windir%\LTSVC\Packages\DWGTrueView\DWGTrueView_2023_English_64bit_dlm.sfx.exe  and wait until finish.		
-5	   LOG:  Downloaded DWGTrueView_2023_English_64bit_dlm.sfx.exe on %computername% successfully		
-6	"SHELL:  %windir%\LTSVC\Packages\DWGTrueView\DWGTrueView_2023_English_64bit_dlm.sfx.exe -suppresslaunch -d ""%windir%\LTSVC\Packages\DWGTrueView"" and store the result in %shellresult%"		
-7	"SHELL:  ""%windir%\LTSVC\Packages\DWGTrueView\DWGTrueView_2023_English_64bit_dlm\setup.exe"" --silent and store the result in %shellresult%"		
-8	   LOG:  Installed DWG TrueVew on %computername% successfully		

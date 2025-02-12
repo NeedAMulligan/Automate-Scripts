@@ -1,3 +1,0 @@
-	Statement		
-4	"POWERSHELL:  set-hpbiossettingvalue -Name ""Bluetooth"" -Value ""Disable"" and store the result in %powershellresult%"		
-5	LOG:  %powershellresult%		

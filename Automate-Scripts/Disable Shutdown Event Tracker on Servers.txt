@@ -1,2 +1,0 @@
-	Statement		
-1	SET:  HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability = 0		

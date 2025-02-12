@@ -1,3 +1,0 @@
-	Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901		
-	Statement		
-1	LTCommand: Registry Write HKLM%5cSYSTEM%5cCurrentControlSet%5cControl%5cDmaSecurity%5cAllowedBuses:3.+Intel(R)+Xeon(R)+E3+-+1200%2f1500+v5%2f6th+Gen+Intel(R)+Core(TM)+PCIe+Controller+(x16)+-+1901:PCI%5cVEN_8086%26DEV_1901		

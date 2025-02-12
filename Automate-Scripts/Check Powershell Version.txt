@@ -1,3 +1,0 @@
-	Statement		
-1	POWERSHELL:  $PSVersionTable.PSVersion and store the result in %powershellresult%		
-2	LOG:  Powershell version %shellresult%		

@@ -1,6 +1,0 @@
-	Statement		
-1	Note: Verify Windows		
-2	IF NOT @os@  Contains  windows  THEN  Exit Script		
-3	SHELL:  taskkill /im ms-teams.exe /f and store the result in %shellresult%		
-4	Execute PowerShell Script as Local and store result in: @powershellresult@		
-	"Remove-Item -Path ""$($ENV:SystemDrive)\Users\*\AppData\Local\Packages\MSTeams_8wekyb3d8bbwe\*"" -Recurse -Force -ErrorAction SilentlyContinue"		
