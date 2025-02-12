@@ -1,0 +1,16 @@
+GET:  @friendlyname@  =  [EXTRAFIELD FriendlyName]
+LOG:  Requested FriendlyName
+Create Folder: %windir%\LTSVC\Packages\MicrosoftVisualC
+LOG:  Created Folder
+DOWNLOAD:  https://aka.ms/vs/17/release/vc_redist.x64.exe  saved to  %windir%\LTSVC\Packages\MicrosoftVisualC\VC_redist.x64.exe  and wait until finish.
+LOG:  Downloaded Microsoft Visual C++ Redistributable on @friendlyname@ successfully
+SHELL:  "%windir%\LTSVC\Packages\MicrosoftVisualC\VC_redist.x64.exe" /install /passive /norestart and store the result in %shellresult%
+LOG:  Ran install script
+LTCommand: Scanning Software 
+LOG:  Resend Software
+IF SOFTWARE INSTALLED Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.38.33130  THEN  Jump to line 15
+Note: Microsoft Visual C++ Redistributable NOT Installed
+Send Email To:helpdesk@ewa.com Subject:Microsoft Visual C++ Redistributable NOT Installed on @friendlyname@
+Script Exit with Error
+LOG:  Installed Microsoft Visual C++ Redistributable on @friendlyname@ successfully
+Exit Script
