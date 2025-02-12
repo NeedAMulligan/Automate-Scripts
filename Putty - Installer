@@ -1,0 +1,14 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\PuTTY
+POWERSHELL:  Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.81-installer.msi -Outfile C:\Windows\ltsvc\packages\%scriptname%\putty.msi and store the result in %powershellresult%
+LOG:  Downloaded PuTTY on %computername% successfully
+SHELL:  "C:\Windows\LTSvc\packages\PuTTY\putty.msi" /qn /norestart ALLUSERS=1 and store the result in %shellresult%
+LOG:  Installed PuTTY on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED PuTTY release 0.81 (64-bit)  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:helpdesk@ewa.com Subject:Unable to install PuTTY on %ComputerName%
+LOG:  PuTTY NOT INSTALLED on %computername%
