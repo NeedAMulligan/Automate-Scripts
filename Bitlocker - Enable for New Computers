@@ -4,7 +4,7 @@ enables bitlocker
 checks status
 emails for failure
 sets Bitlocker status in Extra Data Field
-Backups Bitlocker recovery key to Entra"
+Backups Bitlocker recovery key to Entra
 
 Statement
 POWERSHELL:  Enable-BitLocker c: -RecoveryPasswordProtector -UsedSpaceOnly and store the result in %powershellresult%
