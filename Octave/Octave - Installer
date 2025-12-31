@@ -1,0 +1,10 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\ltsvc\packages\octave
+Note: Downloading from internet
+DOWNLOAD:  https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-installer.exe  saved to  %windir%\ltsvc\packages\octave\octave-9.2.0-w64-installer.exe  and wait until finish.
+LOG:  Downloaded Octave to %computername%
+Note: Installing Octave
+SHELL:  %windir%\ltsvc\packages\octave\octave-9.2.0-w64-installer.exe /S and store the result in %shellresult%
+LOG:  Installed Octave on %computername%
+Resend Software

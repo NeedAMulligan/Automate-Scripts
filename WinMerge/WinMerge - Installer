@@ -1,0 +1,12 @@
+Create Folder: %windir%\LTSVC\Packages\WinMerge
+DOWNLOAD:  https://github.com/WinMerge/winmerge/releases/download/v2.16.20/WinMerge-2.16.20-x64-Setup.exe  saved to  %windir%\LTSVC\Packages\WinMerge\WinMerge-2.16.20-x64-Setup.exe  and wait until finish.
+LOG:  Downloaded WinMerge on %computername% successfully
+SHELL:  "%windir%\LTSVC\Packages\WinMerge\WinMerge-2.16.20-x64-Setup.exe" /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART and store the result in %shellresult%
+LTCommand: Scanning Software 
+IF SOFTWARE INSTALLED WinMerge 2.16.20.0 x64  THEN  Jump to :Software Installed Exit Script
+LOG:  Software NOT Installed 
+Send Email To:EMAIL@EMAIL.COM Subject:WinMerge NOT Installed on %ComputerName%
+Script Exit with Error
+:Software Installed Exit Script - Label
+LOG:  Installed WinMerge on %computername% successfully
+Exit Script

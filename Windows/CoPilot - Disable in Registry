@@ -1,0 +1,11 @@
+	Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\WindowsAI\TurnOffWindowsCopilot\value to 1		
+	Statement		
+1	LTCommand: Registry Write HKLM%5cSOFTWARE%5cMicrosoft%5cPolicyManager%5cdefault%5cWindowsAI%5cTurnOffWindowsCopilot:value:-lt-i1		
+2	"POWERSHELL:  Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\PolicyManager\default\WindowsAI\TurnOffWindowsCopilot -Name ""value"" and store the result in %powershellresult%"		
+3	LOG:  %powershellresult%		
+4	IF  %powershellresult%  Contains  1  THEN  Jump to :Value Set to 1		
+5	LOG:  Value not set to 1 - exit with error		
+6	Script Exit with Error		
+7	:Value Set to 1 - Label		
+8	LOG:  Value properly set - exiting script		
+9	Exit Script		

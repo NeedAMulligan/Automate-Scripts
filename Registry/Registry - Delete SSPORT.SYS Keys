@@ -1,0 +1,5 @@
+LabTech Command
+Command = 25
+Parameters = HKLM%5cSYSTEM%5cCurrentControlSet%5cServices:SSPORT\
+ID = %COMPUTERID%
+ID Type = Computer

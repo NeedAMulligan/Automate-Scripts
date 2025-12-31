@@ -1,0 +1,2 @@
+SHELL:  net localgroup Administrators and store the result in %shellresult%
+   LOG:  %shellresult% on %computername%

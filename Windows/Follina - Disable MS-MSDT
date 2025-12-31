@@ -1,0 +1,6 @@
+Create Folder: c:\windows\ltsvc\packages\Follina
+   LOG:  Follina folder created on %computername%
+SHELL:  reg export HKEY_CLASSES_ROOT\ms-msdt c:\windows\ltsvc\packages\Follina\ms-msdt and store the result in %shellresult%
+   LOG:  Export MS-MSDT reg key on %computername% 
+SHELL:  reg delete HKEY_CLASSES_ROOT\ms-msdt /f and store the result in %shellresult%
+   LOG:  reg key deleted on %computername%

@@ -1,0 +1,2 @@
+SHELL as Admin:  wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "%DATE%", 100, 1 
+   LOG:  Restore Point Created for %computername%
