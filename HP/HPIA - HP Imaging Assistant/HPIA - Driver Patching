@@ -1,0 +1,8 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	   Note: Download hpia-driverupdater.bat - which triggers hpia to analyze / dl / extract / install all drivers for the system		
+4	   DOWNLOAD:  /Labtech/Transfer/Software/HP/HP Image Assistant/hpia-driverupdater.bat  saved to  %windir%\LTSVC\Packages\HPIA\hpia-driverupdater.bat		
+5	      Note: Runs the hpia-driverupdater.bat file		
+6	"      SHELL:  ""C:\Windows\LTSvc\packages\HPIA\hpia-driverupdater.bat"" and store the result in %shellresult%"		
+7	LOG:  Updated drivers on %ComputerName%		

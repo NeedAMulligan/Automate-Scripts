@@ -1,0 +1,4 @@
+SHELL:  w32tm.exe /config /update /syncfromflags:manual /manualpeerlist:time.nist.gov,0x9 /reliable:yes and store the result in %shellresult%
+SHELL:  w32tm /resync /rediscover and store the result in %shellresult%
+SHELL:  w32tm /query /source and store the result in %shellresult%
+LOG:  Updated time server on %computername% with %ShellResult%

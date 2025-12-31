@@ -1,0 +1,5 @@
+Create Folder: %windir%\LTSVC\Packages\GerbView
+DOWNLOAD:  https://www.gerbview.com/download/gv10x64.exe  saved to  %windir%\LTSVC\Packages\GerbView\gv10x64.exe  and wait until finish.
+LOG:  Downloaded GerbView on %computername% successfully
+SHELL:  "%windir%\LTSVC\Packages\GerbView\gv10x64.exe" /verysilent /norestart and store the result in %shellresult%
+LOG:  Installed GerbView on %computername% successfully

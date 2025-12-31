@@ -1,0 +1,3 @@
+   LOG:  Uninstalling HP One Agent on %computername%
+POWERSHELL:  "C:\ProgramData\Package Cache\{31B16C04-055C-4681-8ED6-B7EDCDF600CE}\HPOneAgent.exe" /burn.clean.room  /uninstall and store the result in %powershellresult%
+   LOG:  Uninstalled HP One Agent on %computername%

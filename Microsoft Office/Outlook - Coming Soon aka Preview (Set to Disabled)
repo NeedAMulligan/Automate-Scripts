@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\General]
+"DisablePreviewPlace"=dword:00000001
+
+
+
+
+
+script for automate is
+
+step 1
+Function - LabTech Command
+Command - 24
+Parameter - HKCU%5cSOFTWARE%5cMicrosoft%5cOffice%5c16.0%5cOutlook%5cOptions%5cGeneral%5c::
+Group List - 
+ID - %COMPUTERID%
+ID Type - Computer
+
+step 2
+Function - LabTech Command
+Command - 24
+Parameter - HKCU%5cSOFTWARE%5cMicrosoft%5cOffice%5c16.0%5cOutlook%5cOptions%5cGeneral:DisablePreviewPlace:-lt-i1
+
+Group List - 
+ID - %COMPUTERID%
+ID Type - Computer
+

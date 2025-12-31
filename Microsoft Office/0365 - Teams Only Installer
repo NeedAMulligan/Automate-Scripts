@@ -1,0 +1,5 @@
+Create Folder: %windir%\LTSVC\Packages\Office365
+DOWNLOAD:  /Labtech/Transfer/Software/Office365/Teams_windows_x64.exe  saved to  %windir%\LTSVC\Packages\Office365\Teams_windows_x64.exe
+   LOG:  Download Teams on %computername%
+EXECUTE as Admin:  %windir%\LTSVC\Packages\Office365\Teams_windows_x64.exe  -s  and wait until finish, store the result in %executeresult%
+   LOG:  Installed Teams Only on %computername%

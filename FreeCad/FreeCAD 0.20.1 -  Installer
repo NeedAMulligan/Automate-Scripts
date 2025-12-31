@@ -1,0 +1,8 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\FreeCAD
+DOWNLOAD:  https://github.com/FreeCAD/FreeCAD/releases/download/0.20.1/FreeCAD-0.20.1-WIN-x64-installer-1.exe  saved to  %windir%\LTSVC\Packages\FreeCAD\FreeCAD-0.20.1-WIN-x64-installer-1.exe  and wait until finish.
+   LOG:  Downloaded FreeCAD 0.20.1 on %computername% successfully
+SHELL:  "%windir%\LTSVC\Packages\FreeCAD\FreeCAD-0.20.1-WIN-x64-installer-1.exe" /S /NCRC and store the result in %shellresult%
+Resend Software
+   LOG:  Installed FreeCAD 0.21.1 on %computername% successfully

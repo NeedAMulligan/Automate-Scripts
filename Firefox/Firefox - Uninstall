@@ -1,0 +1,13 @@
+IF FILE Exists  C:\Program Files (x86)\Mozilla Firefox\uninstall\helper.exe  THEN  Jump to :Uninstall Firefox (x86)
+   :Uninstall Firefox (x86) - Label
+      SHELL as Admin:  "C:\Program Files (x86)\Mozilla Firefox\uninstall\helper.exe" /S and store the result in %shellresult%
+IF FILE Exists  C:\Program Files\Mozilla Firefox\uninstall\helper.exe  THEN  Jump to :Uninstall Firefox
+   :Uninstall Firefox - Label
+      SHELL as Admin:  "C:\Program Files\Mozilla Firefox\uninstall\helper.exe" /S and store the result in %shellresult%
+IF FILE Exists  C:\Program Files (x86)\Mozilla Maintenance Service\uninstall.exe  THEN  Jump to :Uninstall Firefox Maintenance (x86)
+   :Uninstall Firefox Maintenance (x86) - Label
+      SHELL as Admin:  "C:\Program Files (x86)\Mozilla Maintenance Service\uninstall.exe" /S and store the result in %shellresult%
+IF FILE Exists  C:\Program Files\Mozilla Maintenance Service\uninstall.exe  THEN  Jump to :Uninstall Firefox Maintenance
+   :Uninstall Firefox Maintenance - Label
+      SHELL as Admin:  "C:\Program Files\Mozilla Maintenance Service\uninstall.exe" /S and store the result in %shellresult%
+         LOG:  Removed Firefox on %computername%

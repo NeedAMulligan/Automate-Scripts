@@ -1,0 +1,6 @@
+Create Folder: %windir%\LTSVC\Packages\Lenovo
+DOWNLOAD:  /Labtech/Transfer/Software/Lenovo/system_update_5.07.0137.exe  saved to  %windir%\LTSVC\Packages\Lenovo\system_update_5.07.0137.exe
+LOG:  Downloaded Lenovo Updater on %computername% successfully
+SHELL:  "%windir%\LTSVC\Packages\Lenovo\system_update_5.07.0137.exe" /VERYSILENT /NORESTART /LOG=c:\tvsu.log and store the result in %shellresult%
+Resend Software
+   LOG:  Installed Lenovo on %computername% successfully

@@ -1,0 +1,14 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\packages\Google Earth Pro
+DOWNLOAD:  https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe  saved to  C:\Windows\LTSvc\packages\Google Earth Pro\googleearthprowin-7.3.6-x64.exe  and wait until finish.
+LOG:  Downloaded Google Earth Pro on %computername% successfully
+SHELL:  "c:\windows\ltsvc\packages\Google Earth Pro\googleearthprowin-7.3.6-x64.exe" OMAHA=1 and store the result in %shellresult%
+LOG:  Installed Google Earth Pro on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED Google Earth Pro  THEN  Jump to :Software NOT Installed
+Exit Script
+:Software NOT Installed - Label
+Send Email To:EMAIL@EMAIL.COM Subject:Unable to install %scriptname% on %ComputerName%
+LOG:  Google Earth Pro NOT INSTALLED on %computername%

@@ -1,0 +1,9 @@
+   LOG:  Uninstalling HP Wolf Security on %computername%
+POWERSHELL:  $msi = ((Get-Package | Where-Object { $_.Name -like "HP Wolf Security" }).fastpackagereference); start-process msiexec.exe -wait -argumentlist  "/x $msi /qn /norestart" and store the result in %powershellresult%
+   LOG:  Uninstalled HP Wolf Security on %computername%
+   LOG:  Uninstalling HP Wolf Security Console on %computername%
+POWERSHELL:  $msi = ((Get-Package | Where-Object { $_.Name -like "HP Wolf Security - Console" }).fastpackagereference); start-process msiexec.exe -wait -argumentlist  "/x $msi /qn /norestart" and store the result in %powershellresult%
+   LOG:  Uninstalled HP Wolf Security Console on %computername%
+   LOG:  Uninstalling HP Security Update Service on %computername%
+POWERSHELL:  $msi = ((Get-Package | Where-Object { $_.Name -like "*HP security update service*" }).fastpackagereference); start-process msiexec.exe -wait -argumentlist  "/x $msi /qn /norestart" and store the result in %powershellresult%
+   LOG:  Uninstalled HP Security Update Service on %computername%

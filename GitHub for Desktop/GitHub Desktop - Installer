@@ -1,0 +1,15 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSvc\packages\GitHubDesktop
+DOWNLOAD:  https://central.github.com/deployments/desktop/desktop/latest/win32?format=msi  saved to  %windir%\ltsvc\packages\GitHubDesktop\github-desktop.msi  and wait until finish.
+LOG:  Downloaded GitHub on %computername% successfully
+SHELL:  "%windir%\ltsvc\packages\GitHubDesktop\github-desktop.msi" /qn /norestart and store the result in %shellresult%
+LOG:  Installed GitHub Desktop on %computername% successfully
+Sleep 30 seconds
+Resend Software
+IF NOT SOFTWARE INSTALLED GitHub Desktop Deployment Tool  THEN  Jump to :Software NOT Installed
+LOG:  Installed GitHub Desktop on %computername% successfully
+Exit Script
+:Software NOT Installed - Label
+Send Email To:EMAIL@EMAIL.COM Subject:Unable to install GitHub Desktop on %ComputerName%
+LOG:  GitHub Desktop NOT INSTALLED on %computername%

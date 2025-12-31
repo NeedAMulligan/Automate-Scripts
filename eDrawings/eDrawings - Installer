@@ -1,0 +1,8 @@
+	Statement		
+1	Note: Verify W10		
+2	IF NOT @os@  Contains  windows 10  THEN  Exit Script		
+3	Create Folder: %windir%\LTSVC\Packages\eDrawings		
+4	DOWNLOAD:  /Labtech/Transfer/Software/eDrawings/eDrawingsFullAllX64.exe  saved to  %windir%\LTSVC\Packages\eDrawings\eDrawingsFullAllX64.exe		
+5	   LOG:  Downloaded eDrawings on %computername% successfully		
+6	"SHELL:  ""%windir%\LTSVC\Packages\eDrawings\eDrawingsFullAllX64.exe"" /s /v/qn and store the result in %shellresult%"		
+7	   LOG:  Installed eDrawings on %computername% successfully		

@@ -1,0 +1,2 @@
+POWERSHELL:  Set-HPBIOSSettingValue -Name "Integrated Camera" -Value "Disable" and store the result in %powershellresult%
+   LOG:  %powershellresult%

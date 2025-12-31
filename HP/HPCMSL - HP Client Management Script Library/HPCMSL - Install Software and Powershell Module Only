@@ -1,0 +1,15 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\LTSVC\Packages\HPCMSL		
+4	DOWNLOAD:  /Labtech/Transfer/Software/HP/HPCMSL/hp-cmsl-1.6.11.exe  saved to  %windir%\LTSVC\Packages\HPCMSL\hp-cmsl-1.6.11.exe		
+5	   LOG:  Downloaded HP-CMSL-1.6.11.exe on %computername% successfully		
+6	"SHELL:  ""%windir%\LTSVC\Packages\HPCMSL\hp-cmsl-1.6.11.exe"" /VERYSILENT and store the result in %shellresult%"		
+7	   LOG:  Installed \hp-cmsl-1.6.11.exe on %computername% successfully		
+8	Resend Software		
+9	Create Folder: %ProgramFiles%\WindowsPowerShell\Modules\HPCMSL		
+10	DOWNLOAD:  /Labtech/Transfer/Software/HP/HPCMSL/HPCMSL.zip  saved to  %ProgramFiles%\WindowsPowerShell\Modules\HPCMSL\HPCMSL.zip		
+11	LOG:  Downloaded HPCMSL.zip on %computername% successfully		
+12	   Note: Extracts HPCMSL.zip		
+13	"POWERSHELL:  Expand-Archive ""%ProgramFiles%\WindowsPowerShell\Modules\HPCMSL\HPCMSL.zip"" -DestinationPath ""%ProgramFiles%\WindowsPowerShell\Modules\HPCMSL"" and store the result in %powershellresult%"		
+14	LOG:  Installed HPCMSL Module on %computername% successfully		

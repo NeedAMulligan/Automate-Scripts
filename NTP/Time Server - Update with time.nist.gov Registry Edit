@@ -1,0 +1,5 @@
+LTCommand: Registry Write HKLM%5cSOFTWARE%5cMicrosoft%5cWindows%5cCurrentVersion%5cDateTime%5cServers:1:time.nist.gov
+SHELL:  w32tm /resync /rediscover and store the result in %shellresult%
+LOG:  %shellresult%
+SHELL:  w32tm /query /source and store the result in %shellresult%
+LOG:  Updated time server on %computername% with %shellresult%

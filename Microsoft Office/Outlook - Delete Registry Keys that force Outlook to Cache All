@@ -1,0 +1,2 @@
+LTCommand: Registry Delete HKCU%5cSOFTWARE%5cPolicies%5cMicrosoft%5coffice%5c16.0%5coutlook%5cCached+Mode:SyncWindowSetting
+LTCommand: Registry Delete HKCU%5cSOFTWARE%5cPolicies%5cMicrosoft%5coffice%5c16.0%5coutlook:Cached+Mode\

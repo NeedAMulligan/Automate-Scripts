@@ -1,0 +1,1 @@
+SHELL as Admin:  WMIC product where name="HP Client Security Manager" call uninstall /nointeractive 

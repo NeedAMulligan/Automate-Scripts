@@ -1,0 +1,2 @@
+Create Folder: %windir%\ltsvc\packages\NSIS\
+DOWNLOAD:  https://downloads.sourceforge.net/project/nsis/NSIS%203/3.09/nsis-3.09-setup.exe?ts=gAAAAABk7N076FjsrZsqjE0G6EaERxuPo9LL4mcXc3-hzKVxpJWBmULHJPwDDwG6f9QwM0i54_Ci5DAJ225cdw8G8C51fi7wuA%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fnsis%2Ffiles%2Flatest%2Fdownload  saved to  %windir%\ltsvc\packages\%scriptname%\nsis.exe  and wait until finish.
