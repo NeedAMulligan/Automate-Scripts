@@ -1,0 +1,9 @@
+	Statement		
+1	Note: Verify Windows		
+2	IF NOT @os@  Contains  windows  THEN  Exit Script		
+3	Create Folder: %windir%\LTSVC\Packages\BentleyViewer		
+4	DOWNLOAD:  /Labtech/Transfer/Software/BentleyViewer/Setup_Viewx64_10.17.00.034.exe  saved to  %windir%\LTSVC\Packages\BentleyViewer\Setup_Viewx64_10.17.00.034.exe		
+5	   LOG:  Downloaded Bentley Viewer on %computername% successfully		
+6	"SHELL:  ""%windir%\LTSVC\Packages\BentleyViewer\Setup_Viewx64_10.17.00.034.exe"" /install /quiet /norestart and store the result in %shellresult%"		
+7	Resend Software		
+8	   LOG:  Installed Bentley Viewer on %computername% successfully		

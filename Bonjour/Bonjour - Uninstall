@@ -1,0 +1,2 @@
+LTCommand: Execute Command MsiExec.exe!!! /X{56DDDFB8-7F79-4480-89D5-25E1F52AB28F} /qn 
+   LOG:  Uninstalled Bonjour on %computername%

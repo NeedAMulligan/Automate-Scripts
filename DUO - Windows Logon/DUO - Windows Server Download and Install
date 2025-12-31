@@ -1,0 +1,15 @@
+Note: Verify Windows Server
+   IF NOT @os@  Contains  windows server  THEN  Exit Script
+Create Folder: %ltsvcdir%\packages\DUO
+DOWNLOAD:  https://dl.duosecurity.com/duo-win-login-latest.exe  saved to  %ltsvcdir%\packages\DUO\duo-win-login-latest.exe  and wait until finish.
+   LOG:  Downloaded DUO on %computername%
+   SHELL:  %Windir%\LtSvc\Packages\DUO\duo-win-login-latest.exe /S /V" /qn IKEY="DITBHXS9G7EIV3XC7OTO" SKEY="x6WzUkf277xIzJgRIXg8pyduLk9KL0nutn5I6EL1" HOST="api-68fce066.duosecurity.com" AUTOPUSH="#0" FAILOPEN="#0" SMARTCARD="#0" RDPONLY="#1" ENABLEOFFLINE="#1" and store the result in %shellresult%
+   Sleep 15 seconds
+   Resend Software
+IF NOT SOFTWARE INSTALLED Duo Authentication for Windows Logon x64  THEN  Jump to :Software NOT Installed
+LOG:  Installed DUO on %computername% successfully
+Exit Script
+:Software NOT Installed - Label
+   Send Email To: EMAIL@EMAIL.COM Subject:Unable to install DUO on %ComputerName%
+   LOG:  DUO NOT INSTALLED on %computername%
+Script Exit with Error

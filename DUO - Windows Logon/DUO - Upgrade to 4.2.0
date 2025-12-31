@@ -1,0 +1,7 @@
+Note: Verify Windows
+IF NOT @os@  Contains  windows  THEN  Exit Script
+Create Folder: %windir%\LTSVC\Packages\DUO
+DOWNLOAD:  /Labtech/Transfer/Software/DUO/duo-win-login-4.2.0.exe  saved to  %windir%\LTSVC\Packages\DUO\duo-win-login-4.2.0.exe
+   LOG:  Downloaded DUO 4.2.0 on %computername%
+SHELL:  %Windir%\LtSvc\Packages\DUO\duo-win-login-4.2.0.exe /S /v /qn and store the result in %shellresult%
+   LOG:  Updated DUO on %computername%

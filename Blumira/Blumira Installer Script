@@ -1,0 +1,22 @@
+LOG:  stopping service
+LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && sc stop rphcpsvc"
+LTCommand: Scanning Services 
+LOG:  deleting service
+LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && sc delete rphcpsvc"
+LTCommand: Scanning Services 
+LOG:  refresh drive cache
+LTCommand: Send Drive Cache C|D|E|
+LTCommand: Send Directory Cache C:\Windows\System32\
+LOG:  delete rphcpsvc
+LTCommand: Delete File C:\Windows\System32\rphcp.exe
+LTCommand: Send Drive Cache C|D|E|
+LOG:  creating folder
+Create Folder: %windir%\LTSVC\Packages\blumira
+LOG:  downloading uninstaller
+DOWNLOAD:  https://dl.blumira.com/agent/files/blu_agent.exe  saved to  %windir%\LTSVC\Packages\blumira\blu_agent.exe  and wait until finish.
+LOG:  running uninstaller from powershell
+Execute PowerShell Script as Local and store result in: @@
+Sleep 30 seconds
+LOG:  running installer script for blumira
+Execute PowerShell Script as Local and store result in: @@
+Exit Script
