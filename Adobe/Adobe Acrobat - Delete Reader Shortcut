@@ -1,0 +1,8 @@
+LTCommand: Delete File C:\Users\Public\Desktop\Acrobat Reader DC.lnk
+Command - 52
+Parameters - C:\Users\Public\Desktop\Acrobat Reader DC.lnk
+ID - %COMPUTERID%
+ID Type - Computer
+
+Script Log Message
+Deleted Adobe Reader Desktop Shortcut on %computername%
