@@ -1,9 +1,0 @@
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cPolicies%5cLenovo%5cSystem+Update%5c::
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cPolicies%5cLenovo%5cSystem+Update%5cUserSettings%5c::
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cPolicies%5cLenovo%5cSystem+Update%5cUserSettings%5cGeneral%5c::
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cPolicies%5cLenovo%5cSystem+Update%5cUserSettings%5cGeneral:AdminCommandLine:
-LTCommand: Registry Read HKLM%5cSOFTWARE%5cPolicies%5cLenovo%5cSystem+Update%5cUserSettings%5cGeneral:AdminCommandLine
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cPolicies%5cLenovo%5cSystem+Update%5cUserSettings%5cGeneral:AdminCommandLine:%2fCM+-search+R+-action+INSTALL+-includerebootpackages+3+-noreboot+-nolicense+-exporttowmi
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cWOW6432Node%5cLenovo%5cSystem+Update%5cPreferences%5cUserSettings%5cGeneral:AskBeforeClosing:NO
-LTCommand: Registry Write HKLM%5cSOFTWARE%5cWOW6432Node%5cLenovo%5cSystem+Update%5cPreferences%5cUserSettings%5cGeneral:AdminCommandLine:%2fCM+-search+R+-action+INSTALL+-includerebootpackages+3+-noreboot+-nolicense+-exporttowmi
-   LOG:  Added HKLM\Software\Policies\Lenovo\System Update\UserSettings\General | Value: [REG_SZ] AdminCommandLine | /CM -search R -action INSTALL -includerebootpackages 3 -noreboot -nolicense -exporttowmi

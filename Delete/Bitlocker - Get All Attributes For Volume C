@@ -1,3 +1,0 @@
-POWERSHELL:  Get-BitLockerVolume -MountPoint C | Format-List and store the result in %powershellresult%
-LOG:  %powershellresult%
-Exit Script

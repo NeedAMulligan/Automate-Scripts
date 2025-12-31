@@ -1,3 +1,0 @@
-SET:  [EXTRAFIELD Onboarding Complete]  = 0
-RUN SCRIPT:  zCW-Scripts\System Automation - Onboarding\Onboarding
-Exit Script

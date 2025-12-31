@@ -1,3 +1,0 @@
-SHELL:  "C:\Program Files (x86)\JetBrains\PyCharm Community Edition 2024.1.4\bin\Uninstall.exe" /S and store the result in %shellresult%
-LOG:  %ShellResult%
-Exit Script

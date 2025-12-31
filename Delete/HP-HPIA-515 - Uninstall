@@ -1,6 +1,0 @@
-IF FILE Exists  C:\Windows\LTSvc\packages\HPIA\hp-hpia-515.exe  THEN  Jump to :Remove HPIA 515
-Note: File Does Not Exist
-Exit Script
-:Remove HPIA 515 - Label
-DELETE:  C:\Windows\LTSvc\packages\HPIA\hp-hpia-515.exe
-   LOG:  Removed Remove HPIA 515 on %ComputerName%

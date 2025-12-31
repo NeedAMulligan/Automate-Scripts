@@ -1,2 +1,0 @@
-LTCommand: Registry Write HKCU%5cSOFTWARE%5cPolicies%5cMicrosoft%5cOffice%5c16.0%5coutlook%5cCached+Mode%5c::
-LTCommand: Registry Write HKCU%5cSOFTWARE%5cPolicies%5cMicrosoft%5cOffice%5c16.0%5coutlook%5cCached+Mode:SyncWindowSetting:-lt-i0

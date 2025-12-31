@@ -1,1 +1,0 @@
-SHELL as Admin:  WMIC product where name="HP Security Update Service" call uninstall /nointeractive 

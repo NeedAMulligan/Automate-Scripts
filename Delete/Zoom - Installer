@@ -1,5 +1,0 @@
-Create Folder: %windir%\LTSVC\Packages\Zoom
-DOWNLOAD:  /Labtech/Transfer/Software/Zoom/ZoomInstallerFull.msi  saved to  %windir%\LTSVC\Packages\Zoom\ZoomInstallerFull.msi
-LOG:  Downloaded Zoom %shellresult%
-SHELL as Admin:  msiexec /i "%windir%\LTSVC\Packages\Zoom\ZoomInstallerFull.msi" /quiet /qn /norestart and store the result in %shellresult%
-LOG:  Installed Zoom %shellresult%

@@ -1,4 +1,0 @@
-IF FILE Exists  "C:\Program Files\CCleaner\uninst.exe"  THEN  Jump to :Uninstall CCleaner
-   :Uninstall CCleaner - Label
-      SHELL as Admin:  "C:\Program Files\CCleaner\uninst.exe" /S and store the result in %shellresult%
-         LOG:  Uninstalled CCleaner on %computername%

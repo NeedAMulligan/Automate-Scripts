@@ -1,3 +1,0 @@
-RUN SCRIPT:  Software\FortiClient\Disconnect from EMS
-POWERSHELL:  Get-Package -Name "*Forticlient*" -RequiredVersion 7.2.3.0929 | Uninstall-Package -Force -ErrorAction SilentlyContinue and store the result in %powershellresult%
-LOG:  %shellresult%

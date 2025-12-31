@@ -1,3 +1,0 @@
-   LOG:  Uninstalling HP Insights on %computername%
-POWERSHELL:  $msi = ((Get-Package | Where-Object { $_.Name -like "HP Insights" }).fastpackagereference); start-process msiexec.exe -wait -argumentlist  "/I $msi /qn /norestart" and store the result in %powershellresult%
-   LOG:  Uninstalled HP Insights on %computername%

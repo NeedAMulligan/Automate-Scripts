@@ -1,1 +1,0 @@
-SHELL:  "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /applyupdates -silent 

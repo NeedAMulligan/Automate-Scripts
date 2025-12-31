@@ -1,3 +1,0 @@
-SHELL:  MsiExec.exe /I{731F6BAA-A986-45A4-8936-7C3AAAAA760B} and store the result in %shellresult%
-SHELL:  MsiExec.exe /I{39AF0813-FA7B-4860-ADBE-93B9B214B914} and store the result in %shellresult%
-Exit Script

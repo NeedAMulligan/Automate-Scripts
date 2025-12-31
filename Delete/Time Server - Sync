@@ -1,6 +1,0 @@
-SHELL as Admin:  net stop w32time and store the result in %shellresult%
-SHELL as Admin:  net start w32time and store the result in %shellresult%
-SHELL as Admin:  w32tm /resync /rediscover and store the result in %shellresult%
-SHELL as Admin:  w32tm /query /source and store the result in %shellresult%
-LOG:  current listed time server on %computername%  is %shellresult%
-LOG:  Updated time server on %computername%

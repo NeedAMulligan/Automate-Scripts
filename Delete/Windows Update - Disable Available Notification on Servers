@@ -1,6 +1,0 @@
-SHELL as Admin:  cd /d “%Windir%\System32” and store the result in %shellresult%
-SHELL as Admin:  takeown /f musnotification.exe and store the result in %shellresult%
-SHELL as Admin:  icacls musnotification.exe /deny Everyone:(X) and store the result in %shellresult%
-SHELL as Admin:  takeown /f musnotificationux.exe and store the result in %shellresult%
-SHELL as Admin:  icacls musnotificationux.exe /deny Everyone:(X) and store the result in %shellresult%
-   LOG:  Windows Updates Available Notification was disabled on %computername%

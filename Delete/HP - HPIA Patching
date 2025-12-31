@@ -1,7 +1,0 @@
-Note: Verify W10
-IF NOT @os@  Contains  windows 10  THEN  Exit Script
-   Note: Download hpia-driverupdater.bat - which triggers hpia to analyze / dl / extract / install all drivers for the system
-   DOWNLOAD:  /Labtech/Transfer/Software/HP/HP Image Assistant/hpia-driverupdater.bat  saved to  %windir%\LTSVC\Packages\HPIA\hpia-driverupdater.bat
-      Note: Runs the hpia-driverupdater.bat file
-      SHELL:  "C:\Windows\LTSvc\packages\HPIA\hpia-driverupdater.bat" and store the result in %shellresult%
-LOG:  Updated drivers on %ComputerName%

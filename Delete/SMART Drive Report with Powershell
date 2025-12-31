@@ -1,2 +1,0 @@
-PowerShell as Admin Get-Disk | Get-StorageReliabilityCounter | Select-Object -ExpandProperty "ReadErrorsCorrected"
-LOG:  SMART Results for drive on %computername%

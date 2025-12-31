@@ -1,1 +1,0 @@
-LTCommand: Execute Command CMD!!!/C "CD /D "%windir%\system32" && "C:\Program Files (x86)\Lenovo\System Update\tvsu.exe" /CM"

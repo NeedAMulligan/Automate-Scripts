@@ -1,5 +1,0 @@
-Create Folder: %windir%\LTSVC\Packages\Logitech
-DOWNLOAD:  https://download01.logi.com/web/ftp/pub/controldevices/unifying/unifying250.exe  saved to  %windir%\LTSVC\Packages\Logitech\unifying250.exe  and wait until finish.
-   LOG:  Downloaded Logitech Unifying Download URL on %computername%
-SHELL as Admin:  %windir%\LTSVC\Packages\Logitech\unifying250.exe /S and store the result in %shellresult%
-   LOG:  Installed Logitech Unifying Software on %computername%

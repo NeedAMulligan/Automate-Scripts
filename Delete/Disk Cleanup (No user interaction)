@@ -1,3 +1,0 @@
-Note: Verify Windows
-IF NOT @os@  Contains  windows  THEN  Exit Script
-SHELL:  cleanmgr /verylowdisk and store the result in %shellresult%

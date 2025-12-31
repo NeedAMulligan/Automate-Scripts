@@ -1,7 +1,0 @@
-	Statement		
-1	IF NOT @os@  Contains  windows 10  THEN  Exit Script		
-2	Create Folder: %windir%\LTSVC\Packages\ExpressPCBPlus		
-3	DOWNLOAD:  /Labtech/Transfer/Software/ExpressPCBPlus/ExpressPCBPlusSetup_3_1_1_0.exe  saved to  %windir%\LTSVC\Packages\ExpressPCBPlus\ExpressPCBPlusSetup_3_1_1_0.exe		
-4	   LOG:  Downloaded ExpressPCBPlus on %computername% successfully		
-5	"SHELL:  ""%windir%\LTSVC\Packages\ExpressPCBPlus\ExpressPCBPlusSetup_3_1_1_0.exe"" /s /v/qn and store the result in %shellresult%"		
-6	   LOG:  Installed ExpressPCBPlus on %computername% successfully		

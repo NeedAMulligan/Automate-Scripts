@@ -1,8 +1,0 @@
-Note: Verify Windows
-IF NOT @os@  Contains  windows  THEN  Exit Script
-Create Folder: %windir%\LTSVC\Packages\google
-   LOG:  Folder Created on %computername% successfully
-DOWNLOAD:  https://dl.google.com/chrome/install/GoogleChromeStandaloneEnterprise.msi  saved to  %windir%\LTSVC\Packages\google\chrome_installer.msi  and wait until finish.
-   LOG:  Downloaded Google Chrome on %computername% successfully
-SHELL:  msiexec /i %windir%\LTSVC\Packages\google\chrome_installer.msi /qn REBOOT=ReallySuppress and store the result in %shellresult%
-   LOG:  Installed Google Chrome on %computername% successfully

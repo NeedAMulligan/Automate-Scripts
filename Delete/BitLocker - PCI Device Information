@@ -1,3 +1,0 @@
-POWERSHELL:  Get-WinEvent -FilterHashTable @{ LogName = "microsoft-windows-bitlocker/bitlocker management"; ID = 4122} -maxevents 1 | Format-List; echo "Secure Boot Status"; Confirm-SecureBootUEFI; and store the result in %powershellresult%
-LOG:  event: %powershellresult%
-Send Email To:EMAIL@EMAIL.COM Subject:%ComputerName% Bitlocker Prerequisites

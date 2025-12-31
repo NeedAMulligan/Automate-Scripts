@@ -1,5 +1,0 @@
-PowerShell as Admin $Path = "C:\Windows\System32\spool\drivers"
-PowerShell as Admin $Acl = (Get-Item $Path).GetAccessControl('Access')
-PowerShell as Admin $Ar = New-Object  System.Security.AccessControl.FileSystemAccessRule("System", "Modify", "ContainerInherit, ObjectInherit", "None", "Deny")
-PowerShell as Admin $Acl.AddAccessRule($Ar)
-PowerShell as Admin Set-Acl $Path $Acl

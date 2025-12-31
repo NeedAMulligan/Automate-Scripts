@@ -1,2 +1,0 @@
-POWERSHELL:  $PSVersionTable.PSVersion and store the result in %powershellresult%
-LOG:  Powershell version %shellresult%

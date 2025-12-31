@@ -1,1 +1,0 @@
-SHELL as Admin:  WMIC product where name="HP Notifications" call uninstall /nointeractive 

@@ -1,9 +1,0 @@
-Note: Verify Windows
-IF NOT @os@  Contains  windows  THEN  Exit Script
-Create Folder: %ltsvcdir%\packages\DUO
-DOWNLOAD:  https://dl.duosecurity.com/duo-win-login-latest.exe  saved to  %ltsvcdir%\packages\DUO\duo-win-login-latest.exe  and wait until finish.
-   LOG:  Downloaded DUO on %computername%
-SHELL:  "C:\Windows\LTSvc\packages\DUO\duo-win-login-latest.exe" /S /V" /qn IKEY="DIUMK310CXOJEHSLT1L9" SKEY="QjOJkG2aDZ5PgyAygkiS7iQLYojGPHf575AlALtO" HOST="api-68fce066.duosecurity.com" AUTOPUSH="#0" FAILOPEN="#0" SMARTCARD="#0" RDPONLY="#0" ENABLEOFFLINE="#1" and store the result in %shellresult%
-Resend Software
-   LOG:  Installed DUO on %computername%
-Exit Script

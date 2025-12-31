@@ -1,5 +1,0 @@
-	Statement		
-1	Note: Verify Server		
-2	IF NOT @os@  Contains  server  THEN  Exit Script		
-3	SHELL:  vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=5% and store the result in %shellresult%		
-4	LOG:  Adjusted VSS percentage to 5% for SentinelOne on %computername%		
