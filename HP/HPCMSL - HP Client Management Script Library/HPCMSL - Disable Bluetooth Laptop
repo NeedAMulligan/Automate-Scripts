@@ -1,4 +1,0 @@
-	Statement		
-1	"POWERSHELL:  $laptop = Get-HPBiosSettingValue -Name ""Bluetooth"" -ErrorAction SilentlyContinue; if ($laptop -eq ""Enable"") {; Write-Output ""Bluetooth is disabled""; Set-HPBIOSSettingValue -Name ""Bluetooth"" -Value ""Disable"";  } else {; Write-Output ""Bluetooth adapter not found or is already disabled""; exit 5; } and store the result in %powershellresult%"		
-2	LOG:  %powershellresult%		
-3	Send Email To:[email address]m Subject:%ComputerName% Bluetooth Status		
