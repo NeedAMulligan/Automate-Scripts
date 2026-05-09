@@ -1,4 +1,0 @@
-	Statement		
-1	"POWERSHELL:  $camera = Get-HPBIOSSettingValue -Name ""Integrated Camera"" -ErrorAction SilentlyContinue; if ($camera -eq ""Enable"") {; Write-Output ""Integrated Camera is disabled""; Set-HPBIOSSettingValue -Name ""Integrated Camera"" -Value ""Disable"" } else { Write-Output ""Integrated Camera already disable or not found""; exit 5; } and store the result in %powershellresult%"		
-2	   LOG:  event: %powershellresult%		
-			
