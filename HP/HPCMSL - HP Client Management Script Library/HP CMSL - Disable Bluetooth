@@ -1,4 +1,0 @@
-	Statement		
-1	RUN SCRIPT:  Software\HP CMSL\Disable Bluetooth Laptop		
-2	LOG:  %powershellresult%		
-3	Send Email To:[email address] Subject:%ComputerName% Bluetooth Status		
