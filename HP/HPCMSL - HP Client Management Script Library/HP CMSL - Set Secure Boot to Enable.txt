@@ -1,4 +1,0 @@
-	Statement		
-1	"POWERSHELL:  Set-HPBIOSSettingValue -Name 'Secure Boot' -Value ""Enable"" and store the result in %powershellresult%"		
-2	LOG:  %powershellresult%		
-3	Exit Script		
