@@ -1,8 +1,0 @@
-Note: Verify Windows
-IF NOT @os@  Contains  windows  THEN  Exit Script
-Create Folder: %ProgramFiles%\WindowsPowerShell\Modules\HPCMSL
-DOWNLOAD:  /Labtech/Transfer/Software/HP/HPCMSL/HPCMSL.zip  saved to  %ProgramFiles%\WindowsPowerShell\Modules\HPCMSL\HPCMSL.zip
-LOG:  Downloaded HPCMSL.zip on %computername% successfully
-   Note: Extracts HPCMSL.zip
-POWERSHELL:  Expand-Archive "%ProgramFiles%\WindowsPowerShell\Modules\HPCMSL\HPCMSL.zip" -DestinationPath "%ProgramFiles%\WindowsPowerShell\Modules\HPCMSL" and store the result in %powershellresult%
-LOG:  Installed HPCMSL Module on %computername% successfully
